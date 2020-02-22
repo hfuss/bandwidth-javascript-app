@@ -8,9 +8,9 @@ const SERVER_USERNAME = process.env.USERNAME || 'my-server-user';
 const SERVER_PASSWORD = process.env.PASSWORD || 'secret-password';
 const Bandwidth = require('node-bandwidth');
 var client = new Bandwidth({
-    userId    : "YOUR_USER_ID",
-    apiToken  : "YOUR_API_TOKEN",
-    apiSecret : "YOUR_API_SECRET"
+    userId    : process.env.BW_USER_ID || "u-something",
+    apiToken  : process.env.BW_API_TOKEN_ID || "t-something",
+    apiSecret : process.env.BW_API_TOKEN_SECRET || "secretive"
 });
 const BUILD_DIR = path.resolve(__dirname, 'dist');
 // the __dirname is the current directory from where the script is running
@@ -19,7 +19,6 @@ app.use(express.static(BUILD_DIR));
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(BUILD_DIR, 'index.html'));
 });
-
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -63,9 +62,10 @@ app.post('/receiveText', auth, (req, res, next) => {
 })
 
 app.get('/sendText', (req,res) => {
+  console.log("Sending text to ", req.query.to)
   var message = {
-      from: "+19195551212", // <-- This must be a Bandwidth number on your account
-      to: "+191955512142",
+      from: process.env.BW_FROM_NUMBER || "+19195551212", // <-- This must be a Bandwidth number on your account
+      to: req.query.to,
       text: "Hello World"
   };
 
