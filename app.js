@@ -20,6 +20,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(BUILD_DIR, 'index.html'));
 });
 
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // JSON Body Parser
 app.use(express.json());
 
@@ -72,4 +79,6 @@ app.get('/sendText', (req,res) => {
   });
 })
 
-app.listen(port);
+app.listen(port, function() {
+  console.log("server is running on 8080!")
+});
