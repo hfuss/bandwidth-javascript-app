@@ -1,14 +1,22 @@
 import _ from 'lodash';
 
-async function component() {
+function component() {
   const element = document.createElement('div');
 
   // Lodash, currently included via a script, is required for this line to work
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  httpGet("http://localhost:8080/sendText")
+  const button = document.createElement('input');
+  button.setAttribute("type", "button");
+  button.setAttribute("value", "Send a Text!");
+  button.onclick = sendText;
 
-  return element;
+  document.body.appendChild(element);
+  document.body.appendChild(button);
+}
+
+function sendText() {
+  httpGet("http://localhost:8080/sendText");
 }
 
 function httpGet(theUrl)
@@ -19,4 +27,4 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-document.body.appendChild(component());
+component();

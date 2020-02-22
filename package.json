@@ -4,7 +4,8 @@
   "description": "Sample Vanilla Javascript app using Bandwidth Messaging APIs to send a text using the Node SDK + Webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack",
+    "dev": "npx webpack && node app.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "node-bandwidth": "^3.0.3"
