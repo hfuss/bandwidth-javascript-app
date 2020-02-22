@@ -1,7 +1,7 @@
 # bandwidth-javascript-app
 Sample Javascript app using Bandwidth Messaging APIs to send a text and receive a text using the Node SDK and bundling with Webpack.
 
-The simple app has both a vanilla JS frontend, and a NodeJS backend. It demonstrates the folliwng features:
+The simple app has both a vanilla JS frontend, and a NodeJS backend. It demonstrates the following features:
 
 * Frontend
   * text field for providing a phone number to send a text to
@@ -30,8 +30,7 @@ In a separate terminal, expose with `ngrok` in order to receive callbacks:
 ngrok http 8080
 ```
 
-Register your callback url i.e. `http://my-server-user:secret-password@1f7a61a3.ngrok.io/receiveText`
-and server's credentials with your application in the Bandwidth
+Register your callback url i.e. `POST http://my-server-user:secret-password@1f7a61a3.ngrok.io/receiveText` with your application in the Bandwidth
 Dashboard.
 
 You can customize the server's settings with the following environment variables:
