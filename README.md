@@ -15,6 +15,7 @@ Getting started:
 # requirements
 brew install npm
 npm install -g npx
+npm install -g ngrok
 
 # project setup
 cd bandwidth-javascript-app/
