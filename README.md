@@ -30,7 +30,7 @@ In a separate terminal, expose with `ngrok` in order to receive callbacks:
 ngrok http 8080
 ```
 
-Register your callback url i.e. `POST http://my-server-user:secret-password@1f7a61a3.ngrok.io/receiveText` with your application in the Bandwidth
+Lastly, register your callback url i.e. `POST http://my-server-user:secret-password@1f7a61a3.ngrok.io/receiveText` with your application in the Bandwidth
 Dashboard.
 
 You can customize the server's settings with the following environment variables:
