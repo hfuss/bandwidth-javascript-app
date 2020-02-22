@@ -12,6 +12,12 @@ The simple app has both a vanilla JS frontend, and a NodeJS backend. It demonstr
 
 Getting started:
 ```bash
+# requirements
+brew install npm
+npm install -g npx
+
+# project setup
+cd bandwidth-javascript-app/
 npm install
 ```
 
