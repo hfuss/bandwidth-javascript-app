@@ -1,26 +1,21 @@
 # bandwidth-javascript-app
-Sample Javascript app using Bandwidth Messaging APIs to send a text and receive a text using the Node SDK and bundling with Webpack.
+Sample Javascript app using Bandwidth Messaging APIs to send a text and receive a text using the Node SDK and bundling with WebPack.
 
 The simple app has both a vanilla JS frontend, and a NodeJS backend. It demonstrates the following features:
 
-* Frontend
+* Frontend (`src/` and `dist/`)
   * text field for providing a phone number to send a text to
   * button for sending an API call to the backend to send a text
-* Backend
+* Backend (`app.js`)
   * `GET /sendText?to=<phone number>` endpoint for sending texts using the Bandwidth Node SDK
-  * `POST /receiveText` endpoint secured with basic auth for recieving JSON callbacks from bandwidth api v1 whenever texts are sent to your number
+  * `POST /receiveText` endpoint secured with basic auth for receiving JSON callbacks from bandwidth api v1 whenever texts are sent to your number
 
 Getting started:
 ```bash
 npm install
 ```
 
-Build the frontend bundle
-```bash
-npm run build
-```
-
-Build and run the server:
+Build the frontend and run the server:
 ```
 npm run dev
 ```
