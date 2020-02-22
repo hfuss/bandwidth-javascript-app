@@ -1,0 +1,29 @@
+{
+  "name": "bandwidth-javascript-app",
+  "version": "1.0.0",
+  "description": "Sample Vanilla Javascript app using Bandwidth Messaging APIs to send a text using the Node SDK + Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfuss/bandwidth-javascript-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hfuss/bandwidth-javascript-app/issues"
+  },
+  "homepage": "https://github.com/hfuss/bandwidth-javascript-app#readme",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "node-bandwidth": "^3.0.3"
+  }
+}
