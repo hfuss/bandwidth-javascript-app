@@ -98,5 +98,5 @@ app.get('/sendText', (req,res) => {
 
 // Start the server
 app.listen(PORT, function() {
-  console.log("server is running on 8080!")
+  console.log("server is running on " + PORT)
 });
