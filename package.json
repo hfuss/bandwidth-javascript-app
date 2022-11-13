@@ -19,7 +19,7 @@
   "homepage": "https://github.com/hfuss/bandwidth-javascript-app#readme",
   "devDependencies": {
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "basic-auth": "^2.0.1",
